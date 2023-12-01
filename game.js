@@ -58,7 +58,6 @@ $("#" + currentColor).removeClass("pressed");
 
 function checkAnswer(currentLevel){
 if (gamePattern[currentLevel]===userClickedPattern[currentLevel]){
-console.log("success");
 
   if(userClickedPattern.length === gamePattern.length) {
     setTimeout(function () {
@@ -66,7 +65,7 @@ console.log("success");
         }, 1000);
   }
 }else{
-  console.log("wrong");
+
   playSound("wrong");
   $("body").addClass("game-over");
   setTimeout(function(){
